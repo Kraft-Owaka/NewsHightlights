@@ -3,9 +3,10 @@ from .config import config_options
 
 
 # Initializing application
-app = Flask(__name__)
+app = Flask(__name__,instance_relative_config = True)
 
 #setting up configuration 
-app.config.from_object(DevConfig)
+from.request import configure_request
+configure_request(app)
 
-from app import views
+return app
