@@ -14,4 +14,13 @@ def index(): # view function
     print('*-*-*Stories*-*-*')
     print(general_news)
     business_news=get_source('business')
-    return render_template('index.html')
+    sports_news=get_source('sports')
+    return render_template('index.html', title = title,entertainment=general_news,business=business_news,sports_news)
+
+    @main.route('/article/<id>')
+    def article(id):
+        article = get_articles(id)
+        print(***get_article***)
+        print(article)
+        title=ARTICLES
+        return render_template('article.html',title = title,id=id,article=article)
