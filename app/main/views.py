@@ -22,5 +22,5 @@ def index(): # view function
         article = get_articles(id)
         print(***get_article***)
         print(article)
-        title=ARTICLES
+        title='ARTICLES'
         return render_template('article.html',title = title,id=id,article=article)
