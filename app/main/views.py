@@ -21,10 +21,11 @@ def index(): # view function
 
     return render_template('index.html', title=title, general=general_news, sports=sports_news, business=business_news, technology=technology_news,)
 
-@main.route('/article/<id>')
-def article(id):
-    article = get_articles(id)
+@main.route('/article/<article_id>')
+def article(article_id):
+    articles = get_articles(article_id)
+
     print('***get_article***')
-    print(article)
+    print(articles)
     title='Article hub'
-    return render_template('article.html',title = title,id=id,article=article)
+    return render_template('article.html',title = title,id=article_id,articles=articles)

@@ -10,42 +10,48 @@
         <div class="col-6-md">
     
            <h1>Helo K</h1>
-            <ul>
+            
                 <h3>General</h3>
                 {% for general_news in general %}
-                <li>{{ general_news.name}}</li>
-                <div class="container">
-                <button type="button">Click Me!</button>
                 
-                </div>
-            {% endfor %}
-            </ul><br>
+                    
+                    <h4 class="h4 mb-4">{{general_news.name}}</h4>  
+                    <a href="/article/{{general_news.id}}" target="_blank" style="color: red;">
+                        Go there  </a>
+                
+            
+                {% endfor %}
+            
 
-            <ul>
+            
                 <!---sports news-->
                 <h3> Sports news</h3>
                 {% for sports_news in sports %}
                 <li>{{  sports_news.name}}</li>
-                <button type="button">Click Me!</button>
-            {% endfor %}
-            </ul><br>
 
-            <ul>
+                <a href="{{sports_news.url}}" target="_blank" style="color: #fff;">
+                    <button  class="btn">Read More <i
+                            class="fas fa-link"></i>
+                    </button>
+            {% endfor %}
+            <br>
+
+            
                 <h3> Business news</h3>
                 {% for business_news in business %}
                 <li>{{  business_news.name}}</li>
                 <button type="button">Click Me!</button>
             {% endfor %}
-            </ul><br>
+            <br>
 
-            <ul>
+            
                 <!---Technology news--->
                 <h3> Technology news</h3>
                 {% for technology_news in technology %}
                 <li>{{  technology_news.name}}</li>
                 <button type="button">Click Me!</button>
             {% endfor %}
-            </ul><br>
+            <br>
             {% endblock %}
         </div>
     </div>

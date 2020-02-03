@@ -3,15 +3,15 @@ class Source:
     Source class to define Source Objects
     '''
 
-    def __init__(self,id,name,description,url,category,language,country):
-        self.id=id
+    def __init__(self,article_id,name,description,url,category,language,country,urlToImage):
+        self.id=article_id
         self.name=name
         self.description = description
         self.url = url
         self.category=category
         self.language=language
         self.country=country
-
+        self.urlToImage=urlToImage
 class Article:
 
     def __init__(self,id,author,title,description,url,image,date):

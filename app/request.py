@@ -1,5 +1,5 @@
 import urllib.request,json
-# this will aid in creating a link/connectio to our API URLthen sends the request, the jason module will format the JSON response 
+# this will aid in creating a link/connection to our API URLthen sends the request, the jason module will format the JSON response 
 from .model import Source, Article
 api_key=None
 base_url=None
@@ -28,8 +28,9 @@ def process_source(source_list):
         category = source_item.get('category')
         language = source_item.get('language')
         country=source_item.get('country')
+        urlToImage=source_item.get('urlToImage')
 
-        source_object = Source(id,name,description,url,category,language,country)
+        source_object = Source(id,name,description,url,category,language,country, urlToImage)
         source_results.append(source_object)
 
     return source_results
@@ -58,15 +59,15 @@ def process_articles(article_list):
     article_object=[]
 
     for article_item in article_list:
-        id = article_item.get('id')
+        article_id = article_item.get('id')
         author=article_item.get('author')
         title=article_item.get('title')
         description=article_item.get('description')
         url=article_item.get('url')
         image=article_item.get('urlToImage')
         date=article_item.get('publishedAt')
-
-        article_result=Article(id,author,title,description,url,image,date)
+        article_result=Article(article_id,author,title,description,url,image,date)
+        
         article_object.append(article_result)
 
     return article_object
