@@ -1,7 +1,6 @@
 import urllib.request,json
 # this will aid in creating a link/connectio to our API URLthen sends the request, the jason module will format the JSON response 
 from .model import Source, Article
-t behaviour of the Movie class
 api_key=None
 base_url=None
 articles_url=None 
@@ -35,27 +34,27 @@ def process_source(source_list):
 
     return source_results
 
-    def get_source(category):
-        get_source_url = base_url.format(category,api_key)
-        print('***get_source_url***')
-        print(get_source_url)
+def get_source(category):
+    get_source_url = base_url.format(category,api_key)
+    print('***get_source_url***')
+    print(get_source_url)
 
 
 
 
-        with urllib.request.urlopen(get_source_url) as url:
-            get_source_data = url.read() 
-            get_source_response = json.loads(get_source_data) #converting JSON result into python dictionary from json.loads function
+    with urllib.request.urlopen(get_source_url) as url:
+        get_source_data = url.read() 
+        get_source_response = json.loads(get_source_data) #converting JSON result into python dictionary from json.loads function
 
-            source_results = None
+        source_results = None
 
-        if get_source_response['sources']:
-            source_result_list=get_source_response['sources']
-            source_results=process_source(source_result_list) #dictionary objects that returns objects list
+    if get_source_response['sources']:
+        source_result_list=get_source_response['sources']
+        source_results=process_source(source_result_list) #dictionary objects that returns objects list
 
     return source_results
 
-    def process_articles(article_list):
+def process_articles(article_list):
     article_object=[]
 
     for article_item in article_list:
@@ -72,20 +71,20 @@ def process_source(source_list):
 
     return article_object
 
-    def get_articles(id):
-        '''
-        Function that processes the articles and returns a list of articles objects
-        '''
-        get_articles_url=articles_url.format(id,api_key)
+def get_articles(id):
+    '''
+    Function that processes the articles and returns a list of articles objects
+    '''
+    get_articles_url=articles_url.format(id,api_key)
 
-        print(f'***{get_articles_url}***')
-        print(get_articles_url)
-        with urllib.request.urlopen(get_articles_url) as url:
-            articles_results = json.loads(url.read())
-            articles_object = None
-            if articles_results['articles']:
-                articles_object = process_articles(articles_results['articles'])
-        return articles_object
+    print(f'***{get_articles_url}***')
+    print(get_articles_url)
+    with urllib.request.urlopen(get_articles_url) as url:
+        articles_results = json.loads(url.read())
+        articles_object = None
+        if articles_results['articles']:
+            articles_object = process_articles(articles_results['articles'])
+    return articles_object
 
 
 

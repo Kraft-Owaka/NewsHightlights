@@ -1,0 +1,56 @@
+body{
+    background-color: chartreuse;
+}
+#general{
+    color:brown;
+    font-family: 'Kaushan Script', cursive;
+    text-align: center;
+    font-size: 70px;
+}
+
+#latest{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 30px;;
+}
+
+#sourcename{
+    color:rgb(146, 54, 12);
+    font-size: 25px;
+    font-family: 'Kaushan Script', cursive;
+    
+}
+#home{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 30px;
+
+}
+#sourcedesc{
+    font-family: 'Vidaloka', serif;
+    font-size: 20px;
+    color:white;
+}
+#cardcontent{
+    background: transparent;
+}
+body{
+
+
+    background-color: rgb(68, 68, 99);
+}
+#wholecard{
+    text-align: left;
+}
+.top{
+    font-family: 'Kaushan Script', cursive;
+    font-size:50px;
+    color:white;
+}
+#sourcebtn{
+    font-size: 30px;
+    font-family: 'Kaushan Script', cursive;
+}
+#articlebtn{
+    font-size: 30px;
+    font-family: 'Kaushan Script', cursive;
+    
+}

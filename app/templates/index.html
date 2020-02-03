@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+ 
+<!-- Content block -->
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-6-md">
+    
+           <h1>Helo K</h1>
+            <ul>
+                <h3>General</h3>
+                {% for general_news in general %}
+                <li>{{ general_news.name}}</li>
+            {% endfor %}
+            </ul><br>
+
+            <ul>
+                <!---sports news-->
+                <h3> Sports news</h3>
+                {% for sports_news in sports %}
+                <li>{{  sports_news.name}}</li>
+            {% endfor %}
+            </ul><br>
+
+            <ul>
+                <h3> Business news</h3>
+                {% for business_news in business %}
+                <li>{{  business_news.name}}</li>
+            {% endfor %}
+            </ul><br>
+
+            <ul>
+                <!---Technology news--->
+                <h3> Technology news</h3>
+                {% for technology_news in technology %}
+                <li>{{  technology_news.name}}</li>
+            {% endfor %}
+            </ul><br>
+            {% endblock %}
+        </div>
+    </div>
+</div>
