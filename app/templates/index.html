@@ -28,11 +28,11 @@
                 <h3> Sports news</h3>
                 {% for sports_news in sports %}
                 <li>{{  sports_news.name}}</li>
-
-                <a href="{{sports_news.url}}" target="_blank" style="color: #fff;">
-                    <button  class="btn">Read More <i
-                            class="fas fa-link"></i>
-                    </button>
+ 
+                    <a href="/article/{{sports_news.id}}" target="_blank" style="color: blue;">
+                        Go there  
+                    </a>
+                
             {% endfor %}
             <br>
 
@@ -40,16 +40,20 @@
                 <h3> Business news</h3>
                 {% for business_news in business %}
                 <li>{{  business_news.name}}</li>
-                <button type="button">Click Me!</button>
+
+                    <a href="/article/{{business_news.id}}" target="_blank" style="color: green">
+                        Go there  
+                    </a>
             {% endfor %}
             <br>
-
-            
                 <!---Technology news--->
                 <h3> Technology news</h3>
                 {% for technology_news in technology %}
                 <li>{{  technology_news.name}}</li>
-                <button type="button">Click Me!</button>
+                
+                <a href="/article/{{technology_news.id}}" target="_blank" style="color: blue;">
+                    Go there  
+                </a>
             {% endfor %}
             <br>
             {% endblock %}
