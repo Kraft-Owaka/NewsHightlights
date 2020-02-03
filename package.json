@@ -1,0 +1,22 @@
+{
+  "name": "newshighlights",
+  "version": "1.0.0",
+  "description": "NEWS HIGHLIGHT PROJECT",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kraft-Owaka/NewsHightlights.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kraft-Owaka/NewsHightlights/issues"
+  },
+  "homepage": "https://github.com/Kraft-Owaka/NewsHightlights#readme"
+}
