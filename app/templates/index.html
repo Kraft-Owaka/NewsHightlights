@@ -13,7 +13,7 @@
         <div class="col-6-md">
            <h1 class="text-center">Helo K</h1>
                
-                <h3 class="title">General</h3>
+                <h2 class="title">General</h2>
                 {% for general_news in general %}
                 <div class="cards">       
                     <h4 class="card-title h4 mb-4">{{general_news.name}}</h4>  
@@ -24,12 +24,12 @@
             
         
                 <!---sports news-->
-                <h3 class="title"> Sports news</h3>
+                <h2 class="title"> Sports news</h2>
                 {% for sports_news in sports %}
                 <div class="cards">
                     <h4 class="card-tirle2">{{  sports_news.name}}</h4>
     
-                        <a href="/article/{{sports_news.id}}" class="btn btn-outline-success" target="_blank" style="color: blue;">
+                        <a href="/article/{{sports_news.id}}" class="btn1" target="_blank" style="color: blue;">
                             Go there  
                         </a>
                     </div>
@@ -38,19 +38,19 @@
             <br>
 
                  <!---Business news-->
-                <h3 class="title"> Business news</h3>
+                <h2 class="title"> Business news</h2>
                 {% for business_news in business %}
                 <div class="cards">
                     <h4 class="title3">{{  business_news.name}}</h4>
 
-                        <a href="/article/{{business_news.id}}" target="_blank" style="color: green">
+                        <a href="/article/{{business_news.id}}" class="btn2" target="_blank" style="color: green">
                             Go there  
                         </a>
                 </div>
             {% endfor %}
             <br>
                 <!---Technology news--->
-                <h3> Technology news</h3>
+                <h2> Technology news</h2>
                 {% for technology_news in technology %}
                 <div class="cards">
                     <h4>{{  technology_news.name}}</h4>
@@ -93,6 +93,16 @@
                 .btn{
                     border: 2px solid blue;
                     color:blue;
+                    
+                }
+                .btn1{
+                    border: 2px solid blue;
+                    color: lightskyblue;
+                    
+                }
+                .btn2{
+                    border: 2px solid blue;
+                    color:lightgreen;
                     
                 }
                 .btn:hover{
