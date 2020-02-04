@@ -1,5 +1,5 @@
 body{
-    background-color: chartreuse;
+    background-color: lightgrey;
 }
 #general{
     color:brown;
@@ -8,10 +8,6 @@ body{
     font-size: 70px;
 }
 
-#latest{
-    font-family: 'Kaushan Script', cursive;
-    font-size: 30px;;
-}
 
 #sourcename{
     color:rgb(146, 54, 12);
@@ -27,7 +23,7 @@ body{
 #sourcedesc{
     font-family: 'Vidaloka', serif;
     font-size: 20px;
-    color:white;
+    color:black;
 }
 #cardcontent{
     background: transparent;
@@ -43,7 +39,7 @@ body{
 .top{
     font-family: 'Kaushan Script', cursive;
     font-size:50px;
-    color:white;
+    color:papayawhip;
 }
 #sourcebtn{
     font-size: 30px;

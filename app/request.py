@@ -40,9 +40,6 @@ def get_source(category):
     print('***get_source_url***')
     print(get_source_url)
 
-
-
-
     with urllib.request.urlopen(get_source_url) as url:
         get_source_data = url.read() 
         get_source_response = json.loads(get_source_data) #converting JSON result into python dictionary from json.loads function

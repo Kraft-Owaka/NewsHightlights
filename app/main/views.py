@@ -10,6 +10,7 @@ def index(): # view function
     '''
     View root page function that returns the index page and its data
     ''' 
+
     general_news = get_source('general')
     print('*************general news*********************')
     print(general_news)

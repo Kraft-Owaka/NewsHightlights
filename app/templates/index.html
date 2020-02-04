@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 
-
+{% block styles %}
+{{super()}}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+{% endblock %}
  
 <!-- Content block -->
 {% block content %}
@@ -9,18 +12,17 @@
     <div class="row">
         <div class="col-6-md">
     
-           <h1>Helo K</h1>
-            
-                <h3>General</h3>
+           <h1 class="text-center">Helo K</h1>
+                <div class="cards">
+                <h3 class="card-title">General</h3>
                 {% for general_news in general %}
-                
-                    
-                    <h4 class="h4 mb-4">{{general_news.name}}</h4>  
-                    <a href="/article/{{general_news.id}}" target="_blank" style="color: red;">
+                               
+                    <h4 class="card-body h4 mb-4">{{general_news.name}}</h4>  
+                    <a href="/article/{{general_news.id}}" class="btn btn-outline-primary" target="_blank" style="color: red;">
                         Go there  </a>
-                
-            
+                            
                 {% endfor %}
+            </div>
             
 
             
@@ -56,6 +58,16 @@
                 </a>
             {% endfor %}
             <br>
+
+            <style>
+                h1{
+                    color: black;
+                    font-weight: bolder;
+                    font-size: 50px;
+                    padding: 30px;
+                }
+
+            </style>
             {% endblock %}
         </div>
     </div>
