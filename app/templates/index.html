@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% import 'macros.html' as macro %}
 {% block styles %}
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         {% endblock %}
 <!-- Content block -->
@@ -21,41 +22,43 @@
                 </div>          
                 {% endfor %}
             
-            
-
-            
+        
                 <!---sports news-->
                 <h3 class="title"> Sports news</h3>
                 {% for sports_news in sports %}
                 <div class="card">
-                <h4 class="card-tirle2">{{  sports_news.name}}</h4>
- 
-                    <a href="/article/{{sports_news.id}}" class="btn btn-outline-success" target="_blank" style="color: blue;">
-                        Go there  
-                    </a>
-                </div>
+                    <h4 class="card-tirle2">{{  sports_news.name}}</h4>
+    
+                        <a href="/article/{{sports_news.id}}" class="btn btn-outline-success" target="_blank" style="color: blue;">
+                            Go there  
+                        </a>
+                    </div>
                 
             {% endfor %}
             <br>
 
-            
+                 <!---Business news-->
                 <h3 class="title"> Business news</h3>
                 {% for business_news in business %}
-                <h4 class="title3">{{  business_news.name}}</h4>
+                <div class="card">
+                    <h4 class="title3">{{  business_news.name}}</h4>
 
-                    <a href="/article/{{business_news.id}}" target="_blank" style="color: green">
-                        Go there  
-                    </a>
+                        <a href="/article/{{business_news.id}}" target="_blank" style="color: green">
+                            Go there  
+                        </a>
+                </div>
             {% endfor %}
             <br>
                 <!---Technology news--->
                 <h3> Technology news</h3>
                 {% for technology_news in technology %}
-                <h4>{{  technology_news.name}}</h4>
-                
-                <a href="/article/{{technology_news.id}}" target="_blank" style="color: blue;">
-                    Go there  
-                </a>
+                <div class="card">
+                    <h4>{{  technology_news.name}}</h4>
+                    
+                    <a href="/article/{{technology_news.id}}" target="_blank" style="color: blue;">
+                        Go there  
+                    </a>
+                </div>
             {% endfor %}
             <br>
 
@@ -63,14 +66,13 @@
                 
                 h1{
                     color: black;
-                    font-weight: bolder;
-                    font-size: 50px;
+                    font-weight: 15px;
+                    font-size: 90px;
                     padding : 30px;
                     padding-top : 250px;
                     padding-bottom : 300px;
-                    background-image: linear-gradient(to top right, rgb(101, 115, 255), rgb(111, 114, 247), rgb(120, 114, 239), rgb(130, 113, 231), rgb(139, 112, 223), rgb(149, 111, 215), rgb(158, 111, 208), rgb(168, 110, 200), rgb(177, 109, 192), rgb(187, 108, 184), rgb(196, 108, 176), rgb(206, 107, 168));
-                    font-family: 'Open Sans', sans-serif;
-                    font-size: 80px;
+                    background-image: linear-gradient(to top, rgb(255, 255, 255), rgb(233, 241, 245), rgb(212, 227, 236), rgb(190, 213, 226), rgb(169, 199, 216), rgb(147, 185, 206), rgb(126, 170, 197), rgb(104, 156, 187), rgb(83, 142, 177), rgb(61, 128, 167), rgb(40, 114, 158), rgb(18, 100, 148));
+                    font-family: 'IBM Plex Serif', serif;
                 }
                 .everything{
                     align-items: center;
@@ -89,12 +91,12 @@
 
                 }
                 .btn{
-                    border: 2px solid green;
-                    color:green;
+                    border: 2px solid blue;
+                    color:blue;
                     
                 }
                 .btn:hover{
-                    background-color : green;
+                    background-color : blue;
                     color:white;
                     width: 10%;
                 }
