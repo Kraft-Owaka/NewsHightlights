@@ -4,7 +4,7 @@ from ..request import get_source,get_articles
 from ..model import Source
 
 # Views
-@main.route('/') #is a route decorator
+@main.route('/', methods=['GET']) #is a route decorator
 def index(): # view function
 
     '''
