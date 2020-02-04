@@ -16,11 +16,11 @@
                 {% for general_news in general %}
                 <div class="cards">       
                     <h4 class="card-title h4 mb-4">{{general_news.name}}</h4>  
-                    <a href="/article/{{general_news.id}}" class="btn btn-outline-primary" target="_blank" >
+                    <a href="/article/{{general_news.id}}" class="btn" target="_blank" >
                         Go there  </a>
-                            
+                </div>          
                 {% endfor %}
-            </div>
+            
             
 
             
@@ -75,7 +75,29 @@
                 .everything{
                     align-items: center;
                 }
+                .cards{
+                    border: 1px solid black;
+                    margin: 40px;
+                    margin-left: 200px;
+                    margin-right: 200px;
+                    padding: 30px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    border-top: 0px;
+                    border-left: 0px;
+                    box-shadow: 1px 3px 3px 20px solid grey;
 
+                }
+                .btn{
+                    border: 2px solid green;
+                    color:green;
+                    
+                }
+                .btn:hover{
+                    background-color : green;
+                    color:white;
+                    width: 10%;
+                }
             </style>
             {% endblock %}
         </div>
