@@ -26,7 +26,7 @@
                 <!---sports news-->
                 <h3 class="title"> Sports news</h3>
                 {% for sports_news in sports %}
-                <div class="card">
+                <div class="cards">
                     <h4 class="card-tirle2">{{  sports_news.name}}</h4>
     
                         <a href="/article/{{sports_news.id}}" class="btn btn-outline-success" target="_blank" style="color: blue;">
@@ -40,7 +40,7 @@
                  <!---Business news-->
                 <h3 class="title"> Business news</h3>
                 {% for business_news in business %}
-                <div class="card">
+                <div class="cards">
                     <h4 class="title3">{{  business_news.name}}</h4>
 
                         <a href="/article/{{business_news.id}}" target="_blank" style="color: green">
@@ -52,7 +52,7 @@
                 <!---Technology news--->
                 <h3> Technology news</h3>
                 {% for technology_news in technology %}
-                <div class="card">
+                <div class="cards">
                     <h4>{{  technology_news.name}}</h4>
                     
                     <a href="/article/{{technology_news.id}}" target="_blank" style="color: blue;">
