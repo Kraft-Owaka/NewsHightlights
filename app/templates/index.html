@@ -1,24 +1,23 @@
 {% extends 'base.html' %}
-
+{% import 'macros.html' as macro %}
 {% block styles %}
 {{super()}}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap" rel="stylesheet">
-    {% endblock %}
- 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+ {% endblock %}
 <!-- Content block -->
 {% block content %}
+
 
 <div class="container-fluid">
     <div class="row">
         <div class="col-6-md">
            <h1 class="text-center">Helo K</h1>
-                <div class="cards">
-                <h3 class="card-title">General</h3>
+                
+                <h3 class="title">General</h3>
                 {% for general_news in general %}
-                               
-                    <h4 class="card-body h4 mb-4">{{general_news.name}}</h4>  
-                    <a href="/article/{{general_news.id}}" class="btn btn-outline-primary" target="_blank" style="color: red;">
+                <div class="cards">       
+                    <h4 class="card-title h4 mb-4">{{general_news.name}}</h4>  
+                    <a href="/article/{{general_news.id}}" class="btn btn-outline-primary" target="_blank" >
                         Go there  </a>
                             
                 {% endfor %}
@@ -29,11 +28,13 @@
                 <!---sports news-->
                 <h3> Sports news</h3>
                 {% for sports_news in sports %}
-                <li>{{  sports_news.name}}</li>
+                <div class="card">
+                <li class="card-title">{{  sports_news.name}}</li>
  
-                    <a href="/article/{{sports_news.id}}" target="_blank" style="color: blue;">
+                    <a href="/article/{{sports_news.id}}" class="btn btn-outline-success" target="_blank" style="color: blue;">
                         Go there  
                     </a>
+                </div>
                 
             {% endfor %}
             <br>

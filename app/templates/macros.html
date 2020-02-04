@@ -1,31 +1,26 @@
 <!-- Displaying Sourcelist list macro  -->
+
 {% macro displaySourceList(source_list)%}
 {% for source_display in source_list |batch(4)%}
-    <div class="row">
+    
         {% for source in source_display %}
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-4" id="wholecard">
-                <div class="panel panel-default" id="cardcontent"></div>
-                    <div class="panel-heading" id="sourcename">
-                        
-                            {{ source.name}}
-                    </div>
-
-   
-                    <div class="panel-body">
-                        <p id="sourcedesc">{{ source.description |truncate(100)}}</p>
-                        
-                        <div class="allbuttons">
-
-                            <span><a href="{{source.url}}" id="sourcebtn">Visit {{source.id}}</a></span><br>
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-title text-center">{{ source.name}}</div>
+                    <div class="card-body">
+                        <p>{{ source.description |truncate(100)}}</p>
+                        <div >
+                            <a href="{{source.url}}" class="btn btn-outline-primary" id="sourcebtn">Visit {{source.id}}</a><br>
     
-                            <span><a href="/article/{{source.id}}" id="articlebtn">
-                                View Articles</a></span><br>   
+                            <button class="btn btn-outline-success" href="/article/{{source.id}}" id="articlebtn">
+                                View Articles</button><br>   
                             
-    
-                        </div>
+                       </div>
+                       </div>
                 </div>
             </div>
-    </div>
+            
+    
 
 {%endfor %}  
 {% endfor %}
