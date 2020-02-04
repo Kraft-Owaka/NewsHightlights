@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% import 'macros.html' as macro %}
 {% block styles %}
+        <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         {% endblock %}
@@ -29,7 +30,7 @@
                 <div class="cards">
                     <h4 class="card-tirle2">{{  sports_news.name}}</h4>
     
-                        <a href="/article/{{sports_news.id}}" class="btn1" target="_blank" style="color: blue;">
+                        <a href="/article/{{sports_news.id}}" class="btn" target="_blank" style="color: blue;">
                             Go there  
                         </a>
                     </div>
@@ -43,7 +44,7 @@
                 <div class="cards">
                     <h4 class="title3">{{  business_news.name}}</h4>
 
-                        <a href="/article/{{business_news.id}}" class="btn2" target="_blank" style="color: green">
+                        <a href="/article/{{business_news.id}}" class="btn" target="_blank" style="color: green">
                             Go there  
                         </a>
                 </div>
@@ -73,6 +74,11 @@
                     padding-bottom : 300px;
                     background-image: linear-gradient(to top, rgb(255, 255, 255), rgb(233, 241, 245), rgb(212, 227, 236), rgb(190, 213, 226), rgb(169, 199, 216), rgb(147, 185, 206), rgb(126, 170, 197), rgb(104, 156, 187), rgb(83, 142, 177), rgb(61, 128, 167), rgb(40, 114, 158), rgb(18, 100, 148));
                     font-family: 'IBM Plex Serif', serif;
+                }
+                h2{
+                    font-family: 'Baloo', cursive;
+                    color:rgb(8, 100, 8);
+
                 }
                 .everything{
                     align-items: center;
